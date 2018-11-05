@@ -2,19 +2,20 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"io/ioutil"
+	"os"
+
 	"gopkg.in/yaml.v2"
 )
 
 type Task struct {
-	Name string
+	Name    string
 	Command string
 }
 
 type Config struct {
 	Version string
-	Tasks []Task
+	Tasks   []Task
 }
 
 func main() {
@@ -34,4 +35,5 @@ func main() {
 	for _, task := range config.Tasks {
 		fmt.Println(task.Command)
 	}
+
 }
