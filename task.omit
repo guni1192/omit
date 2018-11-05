@@ -1,0 +1,6 @@
+version: v0.1
+tasks:
+- name: test
+  command: go test ./...
+- name: build
+  command: go build -o omit
